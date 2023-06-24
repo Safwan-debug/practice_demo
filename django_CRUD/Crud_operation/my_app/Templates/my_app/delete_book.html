@@ -1,0 +1,7 @@
+<h2>Delete Book</h2>
+<p>Are you sure you want to delete the book "{{ book.title }}"?</p>
+<form method="POST" action="">
+    {% csrf_token %}
+    <input type="submit" value="Delete">
+</form>
+<a href="{% url 'book_list' %}">Cancel</a>
